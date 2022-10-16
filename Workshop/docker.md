@@ -6,6 +6,8 @@
 2. Installation von [Docker Desktop](https://www.docker.com/products/docker-desktop) oder Rancher Desktop
 3. Starten von Docker Desktop
 4. Erstellen eines Docker Containers mit dem [Hello World Image](https://hub.docker.com/_/hello-world)
+5. Starte einen weiteren Container mit dem [NGINX Image](https://hub.docker.com/_/nginx)
+6. Starte ein Ubuntu und wechsele in den Container mit `docker run -it ubuntu bash`
 
 ### Docker Handson
 
