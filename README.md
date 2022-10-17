@@ -1,17 +1,17 @@
 # 💬 Talk: Docker für Einsteiger
 
-> Ein Einsteiger-Workshop Tutorial für Docker-Neulinge und -Neugierige von [André Lademann](https://blog.andrelademann.de/).
-> Dauer:  1h 30min - 2h
+```text
+Dauer:              1h 30min - 2h
+Niveau:             Einsteiger (keine Vorkenntnisse notwendig)
+Zielgruppe:         Einsteiger, die Docker kennenlernen wollen
+Voraussetzungen:    Laptop mit Internetzugang und Docker installiert
+Sprache:            Deutsch
+Author:             André Lademann <vergissberlin@gmail.com>
+```
 
 ## Ziel des Talks
 
 Am Ende des Talks weist Du, wie du wie Du grundlegend mit Docker umgehst. Du kannst Anwendungen in Docker-Images packen und diese ausführen, debuggen und verwalten. Wenn alles gut läuft, kannst Du am Ende dein eigenes Docker Image auf Docker Hub hochladen und mit anderen teilen.
-
-## Vorraussetzungen
-
-- Laptop mit Internetzugang
-- Mindestens 1h Zeit
-- Bei Windows: WSL2 installiert
 
 ---
 
