@@ -2,23 +2,29 @@
 
 > Ein Einsteiger-Workschop
 
-## Docker
+## Ziel
+
+Am Ende des Talks weist Du, wie du wie Du mit Docker umgehst. Du kann Anwendungen in Docker-Containern packen und diese in einer Kubernetes-Cluster ausführen.
+
+## Begriffe
+
+### Docker
 
 Docker ist eine Software, die es ermöglicht, Anwendungen in Containern auszuführen. Diese Container sind leichtgewichtig und enthalten alles, was sie benötigen, um zu laufen. Sie können auf jedem Betriebssystem ausgeführt werden, auf dem Docker installiert ist.
 
-### Docker Image
+#### Docker Image
 
 Ein Docker Image ist eine Vorlage, die Docker verwendet, um Container zu erstellen. Ein Image enthält alles, was ein Container benötigt, um zu laufen. Ein Image kann aus einem oder mehreren Schichten bestehen. Jede Schicht enthält eine Reihe von Anweisungen, die beim Erstellen eines Containers ausgeführt werden. Wenn ein Image mehrere Schichten enthält, wird die letzte Schicht als Basis verwendet und die vorherigen Schichten als Overlay hinzugefügt.
 
-### Docker Container
+#### Docker Container
 
 Ein Container ist eine ausführbare Instanz eines Docker Images. Ein Container ist eine isolierte Umgebung, die aus einer Reihe von Schichten besteht. Jede Schicht enthält eine Reihe von Anweisungen, die beim Erstellen eines Containers ausgeführt werden. Wenn ein Container mehrere Schichten enthält, wird die letzte Schicht als Basis verwendet und die vorherigen Schichten als Overlay hinzugefügt.
 
-### Dockerfile
+#### Dockerfile
 
 Ein Dockerfile ist eine Datei, die Anweisungen enthält, die Docker verwendet, um ein Image zu erstellen. Ein Dockerfile enthält eine Reihe von Anweisungen, die beim Erstellen eines Images ausgeführt werden. Wenn ein Dockerfile mehrere Anweisungen enthält, wird die letzte Anweisung als Basis verwendet und die vorherigen Anweisungen als Overlay hinzugefügt.
 
-#### Beispiel Dockerfile
+##### Beispiel Dockerfile
 
 ```dockerfile
 FROM ubuntu:latest
@@ -97,3 +103,9 @@ Ein Node ist eine virtuelle oder physische Maschine, auf der Kubernetes Pods aus
 ### Kubernetes Clusters
 
 Ein Cluster ist eine Gruppe von Nodes, die zusammen arbeiten, um Containeranwendungen auszuführen. Ein Cluster besteht aus mindestens einem Master-Node und mehreren Worker-Node.
+
+---
+
+## Unterm Strich
+
+In diesem Artikel haben wir uns mit den Grundlagen von Docker und Kubernetes beschäftigt. Wir haben gesehen, wie Docker verwendet wird, um Container zu erstellen und zu verwalten. Wir haben auch gesehen, wie Kubernetes verwendet wird, um Containeranwendungen zu verwalten. Wir haben auch gesehen, wie Docker und Kubernetes zusammenarbeiten.
