@@ -11,7 +11,7 @@ Author:             André Lademann <vergissberlin@gmail.com>
 
 ## Ziel des Talks
 
-À la fin de l'exposé, vous montrerez comment traiter fondamentalement Docker. Vous pouvez empaqueter des applications dans des images Docker et les exécuter, les déboguer et les gérer. Si tout se passe bien, vous pouvez finir par télécharger votre propre image Docker sur Docker Hub et la partager avec d'autres.
+À la fin de l'exposé, vous montrerez comment traiter Docker de manière fondamentale. Vous pouvez empaqueter des applications dans des images Docker et les exécuter, les déboguer et les gérer. Si tout se passe bien, vous pouvez finir par télécharger votre propre image Docker sur Docker Hub et la partager avec d'autres.
 
 * * *
 
@@ -27,7 +27,7 @@ Une image Docker est un modèle que Docker utilise pour créer des conteneurs. U
 
 #### Conteneur Docker
 
-Un conteneur est une instance exécutable d'un[Images Docker](#docker-image). Un conteneur est un environnement isolé constitué de plusieurs couches. Chaque couche contient un ensemble d'instructions qui sont exécutées lors de la création d'un conteneur. Si un conteneur contient plusieurs couches, la dernière couche est utilisée comme base et les couches précédentes sont ajoutées en superposition.
+Un conteneur est une instance exécutable d'un[Images Docker](#docker-image). Un conteneur est un environnement isolé composé de plusieurs couches. Chaque couche contient un ensemble d'instructions qui sont exécutées lors de la création d'un conteneur. Si un conteneur contient plusieurs couches, la dernière couche est utilisée comme base et les couches précédentes sont ajoutées en superposition.
 
 #### Fichier Docker
 
@@ -212,7 +212,7 @@ docker build -t workshop .
 docker run -p -d 8000:80 workshop
 ```
 
-Ce`-p` Flag bindet den Port 80 des Containers an den Port 8000 des Hosts. Das `-d`L'indicateur démarre le conteneur en arrière-plan.
+Ce`-p`L'indicateur lie le port 80 du conteneur au port 8000 de l'hôte. Ce`-d`L'indicateur démarre le conteneur en arrière-plan.
 
 ### Tâche 5 : Déboguer le conteneur avec`docker exec`
 
@@ -341,4 +341,4 @@ Que pouvez-vous faire après la discussion pour que quelque chose colle ?
 
 1.  Créer des images Docker pour un projet en cours
 2.  Construire un fichier Docker Compose
-3.  Pour les geeks : découvrez Docker Swarm et Kubernetes
+3.  Pour les nerds : Découvrez Docker Swarm et Kubernetes
