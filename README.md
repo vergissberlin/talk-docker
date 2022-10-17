@@ -1,12 +1,18 @@
-# 💬 Talk: Von Docker bis Kubernetes
+# 💬 Talk: Docker für Einsteiger
 
-> Ein Einsteiger-Workshop für Docker-Neulinge
+> Ein Einsteiger-Workshop Tutorial für Docker-Neulinge
 
 Dauer:  1h 30min - 2h
 
+## Vorraussetzungen
+
+- Laptop mit Internetzugang
+- Mindestens 1h Zeit
+- Bei Windows: WSL2 installiert
+
 ## Ziel des Talks
 
-Am Ende des Talks weist Du, wie du wie Du grundlegend mit Docker umgehst. Du kannst Anwendungen in Docker-Images packen und diese in einer Kubernetes-Cluster ausführen.
+Am Ende des Talks weist Du, wie du wie Du grundlegend mit Docker umgehst. Du kannst Anwendungen in Docker-Images packen und diese ausführen, debuggen und verwalten. Wenn alles gut läuft, kannst Du am Ende dein eigenes Docker Image auf Docker Hub hochladen und mit anderen teilen.
 
 ## Begriffe aus dem Docker-Universum
 
