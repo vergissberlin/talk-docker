@@ -1,10 +1,10 @@
-# Von Docker bis Kubernetes
+# 💬 Talk: Von Docker bis Kubernetes
 
 > Ein Einsteiger-Workschop
 
 ## Ziel
 
-Am Ende des Talks weist Du, wie du wie Du mit Docker umgehst. Du kann Anwendungen in Docker-Containern packen und diese in einer Kubernetes-Cluster ausführen.
+Am Ende des Talks weist Du, wie du wie Du grundlegend mit Docker umgehst. Du kannst Anwendungen in Docker-Images packen und diese in einer Kubernetes-Cluster ausführen.
 
 ## Begriffe
 
