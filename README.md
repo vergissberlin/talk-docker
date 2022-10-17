@@ -128,7 +128,8 @@ Prüfe folgende Dinge zur Vorbeitung:
 - [ ] Docker installiert und lauffähig `docker version`
 - [ ] Docker Compose installiert und lauffähig `docker compose version`
 - [ ] Du bist bei [Docker Hub](https://hub.docker.com/) angemeldet `docker login`
-- [ ] Fork(e) dieses Repositories
+- [ ] **Optional:** Drücke für dieses Repo auf den Stern :D
+- [ ] Fork(e) dieses Repositories auf GitHub und klon(e) es auf deinen Rechner
 
 ### Aufgaben
 
