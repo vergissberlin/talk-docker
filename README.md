@@ -1,8 +1,10 @@
 # 💬 Talk: Von Docker bis Kubernetes
 
-> Ein Einsteiger-Workschop
+> Ein Einsteiger-Workshop für Docker-Neulinge
 
-## Ziel
+Dauer:  1h 30min
+
+## Ziel des Talks
 
 Am Ende des Talks weist Du, wie du wie Du grundlegend mit Docker umgehst. Du kannst Anwendungen in Docker-Images packen und diese in einer Kubernetes-Cluster ausführen.
 
@@ -14,15 +16,15 @@ Docker ist eine Software, die es ermöglicht, Anwendungen in Containern auszufü
 
 #### Docker Image
 
-Ein Docker Image ist eine Vorlage, die Docker verwendet, um Container zu erstellen. Ein Image enthält alles, was ein Container benötigt, um zu laufen. Ein Image kann aus einem oder mehreren Schichten bestehen. Jede Schicht enthält eine Reihe von Anweisungen, die beim Erstellen eines Containers ausgeführt werden. Wenn ein Image mehrere Schichten enthält, wird die letzte Schicht als Basis verwendet und die vorherigen Schichten als Overlay hinzugefügt.
+Ein Docker Image ist eine Vorlage, die Docker verwendet, um Container zu erstellen. Ein Image enthält alles, was ein [Container](#docker-container) benötigt, um zu laufen. Ein Image kann aus einem oder mehreren Schichten bestehen. Jede Schicht enthält eine Reihe von Anweisungen, die beim Erstellen eines Containers ausgeführt werden. Wenn ein Image mehrere Schichten enthält, wird die letzte Schicht als Basis verwendet und die vorherigen Schichten als Overlay hinzugefügt.
 
 #### Docker Container
 
-Ein Container ist eine ausführbare Instanz eines Docker Images. Ein Container ist eine isolierte Umgebung, die aus einer Reihe von Schichten besteht. Jede Schicht enthält eine Reihe von Anweisungen, die beim Erstellen eines Containers ausgeführt werden. Wenn ein Container mehrere Schichten enthält, wird die letzte Schicht als Basis verwendet und die vorherigen Schichten als Overlay hinzugefügt.
+Ein Container ist eine ausführbare Instanz eines [Docker Images](#docker-image). Ein Container ist eine isolierte Umgebung, die aus einer Reihe von Schichten besteht. Jede Schicht enthält eine Reihe von Anweisungen, die beim Erstellen eines Containers ausgeführt werden. Wenn ein Container mehrere Schichten enthält, wird die letzte Schicht als Basis verwendet und die vorherigen Schichten als Overlay hinzugefügt.
 
 #### Dockerfile
 
-Ein Dockerfile ist eine Datei, die Anweisungen enthält, die Docker verwendet, um ein Image zu erstellen. Ein Dockerfile enthält eine Reihe von Anweisungen, die beim Erstellen eines Images ausgeführt werden. Wenn ein Dockerfile mehrere Anweisungen enthält, wird die letzte Anweisung als Basis verwendet und die vorherigen Anweisungen als Overlay hinzugefügt.
+Ein Dockerfile ist eine Datei, die Anweisungen enthält, die Docker verwendet, um ein [Docker Image](#docker-image) zu erstellen. Ein Dockerfile enthält eine Reihe von Anweisungen, die beim Erstellen eines Images ausgeführt werden. Wenn ein Dockerfile mehrere Anweisungen enthält, wird die letzte Anweisung als Basis verwendet und die vorherigen Anweisungen als Overlay hinzugefügt.
 
 ##### Beispiel Dockerfile
 
@@ -34,7 +36,7 @@ CMD ["cowsay", "Hello World"]
 
 ### Docker Compose
 
-Docker Compose ist ein Tool, mit dem Sie Anwendungsumgebungen mit mehreren Containern basierend auf in einer YAML-Datei festgelegten Definitionen ausführen können. Er verwendet Dienst-Definitionen zum Aufbau voll anpassbarer Umgebungen mit mehreren Containern, die Netzwerke und Datenvolumes teilen können.
+Docker Compose ist ein Tool, mit dem Sie Anwendungsumgebungen mit mehreren [Docker Containern](#docker-container) basierend auf in einer YAML-Datei festgelegten Definitionen ausführen können. Er verwendet Dienst-Definitionen zum Aufbau voll anpassbarer Umgebungen mit mehreren Containern, die [Netzwerke](#docker-netzwerke) und [Datenvolumes](#docker-volumes) teilen können.
 
 #### Beispiel Docker Compose
 
@@ -53,6 +55,10 @@ services:
   redis:
     image: "redis:alpine"
 ```
+
+### Docker Netzwerke
+
+Docker Netzwerke sind eine Möglichkeit, Container miteinander zu verbinden. Docker bietet drei verschiedene Arten von Netzwerken an: `bridge`, `host` und `none`. `bridge` ist der Standardmodus, in dem Docker Container miteinander verbindet. `host` verwendet das Host-Netzwerk des Hosts, auf dem der Container ausgeführt wird. `none` deaktiviert das Netzwerk für den Container.
 
 #### Beispiel Docker Compose mit Netzwerk
 
@@ -77,6 +83,32 @@ networks:
     backend:
 ```
 
+### Docker Volumes
+
+Docker Volumes sind eine Möglichkeit, Daten zwischen Containern zu teilen. Docker bietet zwei verschiedene Arten von Volumes an: `bind` und `volume`. `bind` bindet ein Verzeichnis auf dem Host an ein Verzeichnis im Container. `volume` erstellt ein Volume, das von Docker verwaltet wird.
+
+#### Beispiel Docker Compose mit Volume
+
+```yaml
+version: '3.1'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+  redis:
+    image: "redis:alpine"
+    volumes:
+      - redis-data:/data
+
+volumes:
+    redis-data:
+```
 
 ---
 
