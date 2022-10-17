@@ -128,7 +128,7 @@ Check the following things to prepare:
 -   [ ] Docker installed and running`docker version`
 -   [ ] Docker Compose installed and running`docker compose version`
 -   [ ] you are at[Docker Hub](https://hub.docker.com/)Registered`docker login`
--   [ ] **Optional:**For this repo, press the star ⭐ in the upper right corner :D
+-   [ ] **Optional:**For this repo, press the star ⭐ in the top right corner :D
 -   [ ] Fork(e) this repository on GitHub and clone(e) it to your machine
 
 ### tasks
@@ -327,7 +327,7 @@ jobs:
             tags: workshop
 ```
 
-The GitHub Action is written to the`main` Branch ausgeführt. Sie baut das Image und lädt es in die Registry hoch.
+The GitHub Action is written to the`main`Branch executed. It builds the image and uploads it to the registry.
 
 Learn more about GitHub Actions[here](Material/Task-Task-Bonus/task-bonus.md).
 
@@ -341,4 +341,4 @@ What can you do after the talk so that something sticks?
 
 1.  Create Docker images for a current project
 2.  Build a Docker Compose file
-3.  For geeks: Check out Docker Swarm and Kubernetes
+3.  For nerds: Check out Docker Swarm and Kubernetes
