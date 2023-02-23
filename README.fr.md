@@ -11,7 +11,7 @@ Author:             André Lademann <vergissberlin@gmail.com>
 
 ## Ziel des Talks
 
-À la fin de l'exposé, vous montrerez comment traiter Docker de manière fondamentale. Vous pouvez empaqueter des applications dans des images Docker et les exécuter, les déboguer et les gérer. Si tout se passe bien, vous pouvez finir par télécharger votre propre image Docker sur Docker Hub et la partager avec d'autres.
+Am Ende des Talks weist Du, wie du wie Du grundlegend mit Docker umgehst. Du kannst Anwendungen in Docker-Images packen und diese ausführen, debuggen und verwalten. Wenn alles gut läuft, kannst Du am Ende dein eigenes Docker Image auf Docker Hub hochladen und mit anderen teilen.
 
 * * *
 
@@ -121,21 +121,21 @@ volumes:
 
 ## Atelier
 
-### préparation
+### Préparation
 
 Vérifiez les éléments suivants pour vous préparer :
 
 -   [ ] Docker installé et en cours d'exécution`docker version`
 -   [ ] Docker Compose installé et en cours d'exécution`docker compose version`
 -   [ ] tu es a[Hub Docker](https://hub.docker.com/)Inscrit`docker login`
--   [ ] **Optionnel:**Pour ce repo, appuyez sur l'étoile ⭐ dans le coin supérieur droit :D
+-   [ ] **Facultatif:**Pour ce repo, appuyez sur l'étoile ⭐ dans le coin supérieur droit :D
 -   [ ] Fork(e) ce dépôt sur GitHub et clone(e) le sur votre machine
 
 ### Tâches
 
-**Le but des tâches**est-ce un[Image Docker](#docker-image)pour en créer un qui exécute une simple application Web. L'application Web doit générer une simple page HTML. Nous allons ensuite démarrer l'image docker localement et voir comment nous pouvons appeler l'application via le navigateur.
+**Le but des tâches**est-ce un[Image Docker](#docker-image) zu erstellen, welches eine einfache Webanwendung ausführt. Die Webanwendung soll eine einfache HTML Seite ausgeben. Anschließend werden wir das docker image lokal starten und uns anschauen wie wir die Anwendung über den Browser aufrufen können.
 
-1.  Création d'un Dockerfile
+1.  Erstellen eines Dockerfiles
 2.  Démarrage d'un conteneur
 3.  Logging des Containers mit`docker logs`
 4.  Appel d'un site Web dans le navigateur
@@ -166,7 +166,7 @@ Nous pouvons maintenant commencer à construire l'image. Pour ce faire, nous pas
 docker build -t workshop .
 ```
 
-Ce`-t`Le drapeau donne un nom à l'image. Le point à la fin de la commande indique que le Dockerfile se trouve dans le répertoire courant.
+Le`-t`Le drapeau donne un nom à l'image. Le point à la fin de la commande indique que le Dockerfile se trouve dans le répertoire courant.
 
 Nous pouvons maintenant démarrer le conteneur :
 
@@ -176,7 +176,7 @@ docker run workshop
 
 ### Tâche 3 - journalisation du conteneur avec`docker logs`
 
-Nous pouvons obtenir le journal du conteneur avec la commande`docker logs`affichage. Pour ce faire, nous avons besoin de l'ID du conteneur que nous utilisons avec la commande`docker ps`peut afficher.
+Nous pouvons obtenir le journal du conteneur avec la commande`docker logs`afficher. Pour ce faire, nous avons besoin de l'ID du conteneur que nous utilisons avec la commande`docker ps`peut afficher.
 
 ```bash
 docker logs <container-id>
@@ -212,11 +212,11 @@ docker build -t workshop .
 docker run -p -d 8000:80 workshop
 ```
 
-Ce`-p`L'indicateur lie le port 80 du conteneur au port 8000 de l'hôte. Ce`-d`L'indicateur démarre le conteneur en arrière-plan.
+Le`-p` Flag bindet den Port 80 des Containers an den Port 8000 des Hosts. Das `-d`L'indicateur démarre le conteneur en arrière-plan.
 
 ### Tâche 5 : Déboguer le conteneur avec`docker exec`
 
-Nous pouvons voir le contenu du conteneur en utilisant la commande`docker exec`affichage. Pour ce faire, nous avons besoin de l'ID du conteneur que nous utilisons avec la commande`docker ps`peut afficher.
+Nous pouvons voir le contenu du conteneur en utilisant la commande`docker exec`afficher. Pour ce faire, nous avons besoin de l'ID du conteneur que nous utilisons avec la commande`docker ps`peut afficher.
 
 ```bash
 docker exec -it <container-id> bash
@@ -251,7 +251,7 @@ Après les deux-points se trouve le chemin dans le conteneur.
 
 ### Tâche 9 - Publier votre propre image dans le registre
 
-Nous pouvons créer l'image personnalisée avec la commande`docker push`télécharger dans le registre. Pour cela, nous avons besoin du nom de l'image et de la balise.
+Nous pouvons créer l'image personnalisée avec la commande`docker push` in die Registry hochladen. Dazu benötigen wir den Namen des Images und den Tag.
 
 ```bash
 docker push <image-name>:<tag>
@@ -261,7 +261,7 @@ La balise est facultative. Si non spécifié, sera`latest`utilisé.
 
 ### Tâche 10 - Création d'un fichier Docker Compose
 
-Nous pouvons ajouter plusieurs conteneurs avec la commande`docker run`début. Pour cela, nous avons besoin des noms des images et des ports.
+Nous pouvons ajouter plusieurs conteneurs avec la commande`docker run`commencer. Pour cela, nous avons besoin des noms des images et des ports.
 
 ```bash
 docker run -p 8000:80 workshop
@@ -293,9 +293,9 @@ Nous pouvons utiliser l'application avec la commande`docker-compose up`début.
 docker-compose up -d
 ```
 
-Ce`-d`Flag démarre l'application en arrière-plan comme Docker.
+Le`-d`Flag démarre l'application en arrière-plan comme Docker.
 
-**Voici une liste des commandes les plus importantes :**
+**Voici une liste des commandes les plus importantes :**
 
 ```bash
 docker-compose up -d # Startet die Anwendung im Hintergrund
@@ -342,3 +342,7 @@ Que pouvez-vous faire après la discussion pour que quelque chose colle ?
 1.  Créer des images Docker pour un projet en cours
 2.  Construire un fichier Docker Compose
 3.  Pour les nerds : Découvrez Docker Swarm et Kubernetes
+
+## Contribuer
+
+Avez-vous des suggestions d'amélioration? Alors n'hésitez pas à créer une pull request ou à écrire quelques lignes dans[forum de discussion](https://github.com/vergissberlin/talk-docker/discussions)ou[Twitter](https://twitter.com/vergissberlin).
