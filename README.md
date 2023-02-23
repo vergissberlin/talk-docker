@@ -342,3 +342,7 @@ Was kannst Du nach dem Talk tun, damit etwas hängen bleibt?
 1. Erstell Dir Docker images für ein aktuelles Projekt
 2. Bau Dir eine Docker Compose Datei dazu
 3. Für Streber: Schau Dir Docker Swarm und Kubernetes an
+
+## Contribute
+
+Du hast Verbesserungsvorschläge? Dann erstelle gerne ein Pull Request oder schreibe ein paar Zeilen in [Diskussionforum](https://github.com/vergissberlin/talk-docker/discussions) oder [Twitter](https://twitter.com/vergissberlin).
