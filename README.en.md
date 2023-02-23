@@ -121,7 +121,7 @@ volumes:
 
 ## Workshop
 
-### preparation
+### Preparation
 
 Check the following things to prepare:
 
@@ -131,7 +131,7 @@ Check the following things to prepare:
 -   [ ] **Optional:**For this repo, press the star ⭐ in the top right corner :D
 -   [ ] Fork(e) this repository on GitHub and clone(e) it to your machine
 
-### tasks
+### Tasks
 
 **The goal of the tasks**is it a[Docker Image](#docker-image)to create one that runs a simple web application. The web application should output a simple HTML page. We will then start the docker image locally and see how we can call up the application via the browser.
 
@@ -141,7 +141,7 @@ Check the following things to prepare:
 4.  Calling up a website in the browser
 5.  Debugging des Containers mit`docker exec`
 6.  Restart the container
-7.  Stop the Containers
+7.  Stop des Containers
 8.  Using volume mounts
 9.  Publish your own image in the registry
 10. Creating a Docker Compose File
@@ -166,7 +166,7 @@ Now we can start building the image. To do this, we change to the directory and 
 docker build -t workshop .
 ```
 
-That`-t`Flag gives the image a name. The dot at the end of the command indicates that the Dockerfile is in the current directory.
+The`-t`Flag gives the image a name. The dot at the end of the command indicates that the Dockerfile is in the current directory.
 
 Now we can start the container:
 
@@ -212,7 +212,7 @@ docker build -t workshop .
 docker run -p -d 8000:80 workshop
 ```
 
-That`-p`Flag binds the container's port 80 to the host's port 8000. That`-d`Flag starts the container in the background.
+The`-p`Flag binds the container's port 80 to the host's port 8000. The`-d`Flag starts the container in the background.
 
 ### Task 5 - Debugging the container with`docker exec`
 
@@ -293,9 +293,9 @@ We can use the application with the command`docker-compose up`beginning.
 docker-compose up -d
 ```
 
-That`-d`Flag starts the application in the background like Docker.
+The`-d`Flag starts the application in the background like Docker.
 
-**Here is a list of the most important commands:**
+**Hier eine  Liste der wichtigsten Befehle:**
 
 ```bash
 docker-compose up -d # Startet die Anwendung im Hintergrund
@@ -305,7 +305,7 @@ docker-compose logs # Zeigt die Logs der Container an
 docker-compose exec <service> bash # Startet eine Shell im Container
 ```
 
-### Aufgabe 12 - Einrichtung einer GitHub Action
+### Task 12 - Setting up a GitHub Action
 
 We can create a GitHub Action that will be triggered on every push on the`main`Branch uploads a new image to the registry. To do this, we create a new file called`.github/workflows/docker.yml`with the following content:
 
@@ -341,4 +341,8 @@ What can you do after the talk so that something sticks?
 
 1.  Create Docker images for a current project
 2.  Build a Docker Compose file
-3.  For nerds: Check out Docker Swarm and Kubernetes
+3.  For geeks: Check out Docker Swarm and Kubernetes
+
+## Contribute
+
+Do you have suggestions for improvement? Then feel free to create a pull request or write a few lines in[discussion forum](https://github.com/vergissberlin/talk-docker/discussions)or[Twitter](https://twitter.com/vergissberlin).
