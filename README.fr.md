@@ -1,4 +1,4 @@
-# 💬 Présentation : Docker pour les débutants
+# 💬 Talk: Docker pour les débutants
 
 ```text
 Dauer:              1h 30min - 2h
@@ -11,7 +11,7 @@ Author:             André Lademann <vergissberlin@gmail.com>
 
 ## Ziel des Talks
 
-Am Ende des Talks weist Du, wie du wie Du grundlegend mit Docker umgehst. Du kannst Anwendungen in Docker-Images packen und diese ausführen, debuggen und verwalten. Wenn alles gut läuft, kannst Du am Ende dein eigenes Docker Image auf Docker Hub hochladen und mit anderen teilen.
+À la fin du talc, vous montrez comment vous êtes fondamentalement manipulé avec Docker. Vous pouvez emballer des applications dans Docker Images et les exécuter, les déboguer et les gérer. Si tout se passe bien, vous pouvez à la fin, vous pouvez télécharger votre propre image Docker sur Docker Hub et la partager avec les autres.
 
 * * *
 
@@ -19,21 +19,21 @@ Am Ende des Talks weist Du, wie du wie Du grundlegend mit Docker umgehst. Du kan
 
 ### Docker
 
-Docker est un logiciel qui permet aux applications de s'exécuter dans des conteneurs. Ces conteneurs sont légers et contiennent tout ce dont ils ont besoin pour fonctionner. Ils peuvent être exécutés sur n'importe quel système d'exploitation sur lequel Docker est installé.
+Docker est un logiciel qui permet à des applications d'être effectuées dans des conteneurs. Ces conteneurs sont légers et contiennent tout ce dont vous avez besoin. Ils peuvent être effectués sur tout système d'exploitation sur lequel Docker est installé.
 
-#### Image Docker
+#### Image docker
 
-Une image Docker est un modèle que Docker utilise pour créer des conteneurs. Une image contient tout ce qu'un[Récipient](#docker-container)nécessaire pour courir. Une image peut être constituée d'un ou de plusieurs calques. Chaque couche contient un ensemble d'instructions qui sont exécutées lors de la création d'un conteneur. Si une image contient plusieurs calques, le dernier calque est utilisé comme base et les calques précédents sont ajoutés en superposition.
+Une image Docker est un modèle utilisé pour créer des conteneurs. Une image contient tout un[Récipient](#docker-container)Besoin de courir. Une image peut être composée d'une ou plusieurs couches. Chaque couche contient un certain nombre d'instructions qui sont effectuées lors de la création d'un conteneur. Si une image contient plusieurs couches, la dernière couche est utilisée comme base et les couches précédentes sont ajoutées sous forme de superposition.
 
-#### Conteneur Docker
+#### Récipient Docker
 
-Un conteneur est une instance exécutable d'un[Images Docker](#docker-image). Un conteneur est un environnement isolé composé de plusieurs couches. Chaque couche contient un ensemble d'instructions qui sont exécutées lors de la création d'un conteneur. Si un conteneur contient plusieurs couches, la dernière couche est utilisée comme base et les couches précédentes sont ajoutées en superposition.
+Un conteneur est une instance exécutable d'un[Images docker](#docker-image). Un conteneur est un environnement isolé qui se compose d'une série de couches. Chaque couche contient un certain nombre d'instructions qui sont effectuées lors de la création d'un conteneur. Si un conteneur contient plusieurs couches, la dernière couche est utilisée comme base et les couches précédentes sont ajoutées comme superposition.
 
-#### Fichier Docker
+#### Dockerfile
 
-Un Dockerfile est un fichier qui contient des instructions que Docker utilise pour créer un[Image Docker](#docker-image)créer. Un Dockerfile contient un ensemble d'instructions qui sont exécutées lors de la construction d'une image. Si un Dockerfile contient plusieurs directives, la dernière directive est utilisée comme base et les directives précédentes sont ajoutées en superposition.
+Un fichier docker est un fichier qui contient des instructions que Docker utilise dans un[Image docker](#docker-image)pour créer. Un fichier docker contient un certain nombre d'instructions conçues lors de la création d'une image. Si un fichier docker contient plusieurs instructions, la dernière instruction est utilisée comme base et les instructions précédentes sont ajoutées sous forme de superposition.
 
-##### Exemple de Dockerfile
+##### Exemple de fichier docker
 
 ```dockerfile
 FROM ubuntu:latest
@@ -43,9 +43,9 @@ CMD ["cowsay", "Hello World"]
 
 ### Docker Compose
 
-Docker Compose est un outil qui vous permet de créer des environnements d'application avec plusieurs[Conteneurs Docker](#docker-container)basé sur les définitions spécifiées dans un fichier YAML. Il utilise des définitions de service pour créer des environnements multi-conteneurs entièrement personnalisables qui[réseaux](#docker-netzwerke)et[volumes de données](#docker-volumes)peut partager.
+Docker Compose est un outil avec lequel vous pouvez utiliser des environnements d'application avec plusieurs[Conteneurs docker](#docker-container)Basé sur des définitions définies dans un fichier YAML. Il utilise des définitions de service pour construire des environnements entièrement personnalisables avec plusieurs conteneurs qui[Réseaux](#docker-netzwerke)et[Volumes de données](#docker-volumes)peut partager.
 
-#### Exemple de composition Docker
+#### Exemple Docker Compose
 
 ```yaml
 version: '3.7'
@@ -63,11 +63,11 @@ services:
     image: "redis:alpine"
 ```
 
-### Réseaux Docker
+### Réseaux de docker
 
-Les réseaux Docker sont un moyen de connecter des conteneurs entre eux. Docker propose trois types de réseaux différents :`bridge`,`host`et`none`.`bridge`est le mode par défaut dans lequel Docker connecte les conteneurs.`host`utilise le réseau hôte de l'hôte exécutant le conteneur.`none`désactive la mise en réseau pour le conteneur.
+Les réseaux Docker sont un moyen de connecter les conteneurs. Docker propose trois types de réseaux différents:`bridge`,`host`et`none`.`bridge`est le mode standard dans lequel le conteneur Docker se connecte.`host`Utilisez le réseau hôte de l'hôte sur lequel le conteneur est exécuté.`none`Désactive le réseau du conteneur.
 
-#### Exemple Docker Compose avec réseau
+#### Exemple de docker composé avec le réseau
 
 ```yaml
 version: '3.1'
@@ -90,11 +90,11 @@ networks:
     backend:
 ```
 
-### Volumes Docker
+### Volumes de docker
 
-Les volumes Docker sont un moyen de partager des données entre conteneurs. Docker propose deux types de volumes différents :`bind`et`volume`.`bind`lie un répertoire sur l'hôte à un répertoire dans le conteneur.`volume`crée un volume géré par Docker.
+Les volumes de Docker sont un moyen de partager des données entre les conteneurs. Docker propose deux types de volumes différents:`bind`et`volume`.`bind`Loue un répertoire sur l'hôte à un répertoire dans le conteneur.`volume`Crée un volume géré par Docker.
 
-#### Exemple Docker Compose avec volume
+#### Exemple de docker composé avec le volume
 
 ```yaml
 version: '3.1'
@@ -123,34 +123,34 @@ volumes:
 
 ### Préparation
 
-Vérifiez les éléments suivants pour vous préparer :
+Vérifiez les choses suivantes à préparer:
 
--   [ ] Docker installé et en cours d'exécution`docker version`
--   [ ] Docker Compose installé et en cours d'exécution`docker compose version`
--   [ ] tu es a[Hub Docker](https://hub.docker.com/)Inscrit`docker login`
--   [ ] **Facultatif:**Pour ce repo, appuyez sur l'étoile ⭐ dans le coin supérieur droit :D
--   [ ] Fork(e) ce dépôt sur GitHub et clone(e) le sur votre machine
+-   [ ] Docker installé et exécuté -up`docker version`
+-   [ ] Docker compose installé et exécuté -up`docker compose version`
+-   [ ] Vous êtes à[Hub docker](https://hub.docker.com/)inscrit`docker login`
+-   [ ] **Facultatif:**Appuyez pour ce dépôt à l'étoile ⭐ dans le coin supérieur droit: D
+-   [ ] Fork (E) Ces référentiels sur GitHub et Clone (E) sur votre ordinateur
 
 ### Tâches
 
-**Le but des tâches**est-ce un[Image Docker](#docker-image) zu erstellen, welches eine einfache Webanwendung ausführt. Die Webanwendung soll eine einfache HTML Seite ausgeben. Anschließend werden wir das docker image lokal starten und uns anschauen wie wir die Anwendung über den Browser aufrufen können.
+**Le but des tâches**Est-ce un[Image docker](#docker-image)Pour créer qui réalise une application Web simple. L'application Web doit sortir une page HTML simple. Ensuite, nous commencerons l'image Docker localement et verrons comment nous pouvons appeler l'application via le navigateur.
 
-1.  Erstellen eines Dockerfiles
-2.  Démarrage d'un conteneur
+1.  Création d'un fichier docker
+2.  Début d'un conteneur
 3.  Logging des Containers mit`docker logs`
-4.  Appel d'un site Web dans le navigateur
+4.  Appelez un site Web dans le navigateur
 5.  Debugging des Containers mit`docker exec`
 6.  Neustart des Containers
 7.  Stoppen des Containers
-8.  Utilisation des montages de volume
+8.  Utiliser des supports de volume
 9.  Publiez votre propre image dans le registre
-10. Création d'un fichier de composition Docker
-11. Démarrer, arrêter et déboguer une application avec Docker Compose
-12. **Prime:**Configuration d'une action GitHub qui construit automatiquement l'image et la pousse vers le registre
+10. Création d'un fichier docker compose
+11. Démarrer, arrêter et déboguer une demande avec Docker Compose
+12. **Prime:**Établissement d'une action github qui construit automatiquement l'image et dans le registre push
 
-### Tâche 1 - Création d'un Dockerfile
+### Tâche 1 - Création d'un fichier docker
 
-Examinons d'abord une simple image Docker. Pour ce faire, nous créons un répertoire et créons un fichier appelé`Dockerfile`avec le contenu suivant :
+Tout d'abord, nous voulons regarder une image Docker simple. Pour ce faire, nous créons un répertoire et créons un fichier appelé`Dockerfile`Avec le contenu suivant:
 
 ```dockerfile
 FROM ubuntu:latest
@@ -158,17 +158,17 @@ RUN apt-get update && apt-get install -y cowsay
 CMD ["cowsay", "Hello World"]
 ```
 
-### Tâche 2 - Démarrer un conteneur
+### Tâche 2 - Début d'un conteneur
 
-Nous pouvons maintenant commencer à construire l'image. Pour ce faire, nous passons au répertoire et exécutons la commande suivante :
+Maintenant, nous pouvons commencer à construire l'image. Pour ce faire, nous passons au répertoire et réalisons la commande suivante:
 
 ```bash
 docker build -t workshop .
 ```
 
-Le`-t`Le drapeau donne un nom à l'image. Le point à la fin de la commande indique que le Dockerfile se trouve dans le répertoire courant.
+Le`-t`Le drapeau donne un nom à l'image. Le point à la fin de la commande indique que le fichier docker réside dans le répertoire actuel.
 
-Nous pouvons maintenant démarrer le conteneur :
+Maintenant, nous pouvons démarrer le conteneur:
 
 ```bash
 docker run workshop
@@ -176,22 +176,22 @@ docker run workshop
 
 ### Tâche 3 - journalisation du conteneur avec`docker logs`
 
-Nous pouvons obtenir le journal du conteneur avec la commande`docker logs`afficher. Pour ce faire, nous avons besoin de l'ID du conteneur que nous utilisons avec la commande`docker ps`peut afficher.
+Nous pouvons utiliser le journal du conteneur avec la commande`docker logs`afficher. Pour ce faire, nous avons besoin de l'ID de conteneur, que nous avec la commande`docker ps`peut afficher.
 
 ```bash
 docker logs <container-id>
 ```
 
-### Tâche 4 - Appel d'une page Web dans le navigateur
+### Tâche 4 - Appel d'un site Web dans le navigateur
 
-Pour un site Web, nous avons besoin d'un serveur Web. Pour ce faire, nous créons un nouveau fichier appelé`Dockerfile`avec le contenu suivant :
+Nous avons besoin d'un serveur Web pour un site Web. Pour ce faire, nous créons un nouveau fichier appelé`Dockerfile`Avec le contenu suivant:
 
 ```dockerfile
 FROM nginx:latest
 COPY index.html /usr/share/nginx/html/index.html
 ```
 
-Pour que nous puissions appeler le site Web dans le navigateur, nous créons un nouveau fichier appelé`index.html`avec le contenu suivant :
+Pour que nous puissions accéder au site Web dans le navigateur, nous créons un nouveau fichier appelé`index.html`Avec le contenu suivant:
 
 ```html
 <!DOCTYPE html>
@@ -205,70 +205,70 @@ Pour que nous puissions appeler le site Web dans le navigateur, nous créons un 
 </html>
 ```
 
-Nous pouvons maintenant créer l'image et démarrer le conteneur :
+Maintenant, nous pouvons construire l'image et démarrer le conteneur:
 
 ```bash
 docker build -t workshop .
 docker run -p -d 8000:80 workshop
 ```
 
-Le`-p` Flag bindet den Port 80 des Containers an den Port 8000 des Hosts. Das `-d`L'indicateur démarre le conteneur en arrière-plan.
+Le`-p`L'indicateur lie le port 80 du conteneur au port 8000 de l'hôte. Le`-d`Le drapeau démarre le conteneur en arrière-plan.
 
-### Tâche 5 : Déboguer le conteneur avec`docker exec`
+### Exercice 5 - débogage du conteneur avec`docker exec`
 
-Nous pouvons voir le contenu du conteneur en utilisant la commande`docker exec`afficher. Pour ce faire, nous avons besoin de l'ID du conteneur que nous utilisons avec la commande`docker ps`peut afficher.
+Nous pouvons utiliser le contenu du conteneur avec la commande`docker exec`afficher. Pour ce faire, nous avons besoin de l'ID de conteneur, que nous avec la commande`docker ps`peut afficher.
 
 ```bash
 docker exec -it <container-id> bash
 ```
 
-### Tâche 6 : redémarrer le conteneur
+### Tâche 6 - Redémarrer du conteneur
 
-Nous pouvons créer le conteneur avec la commande`docker restart`Recommencer à nouveau. Pour ce faire, nous avons besoin de l'ID du conteneur que nous utilisons avec la commande`docker ps`peut afficher.
+Nous pouvons utiliser le conteneur avec la commande`docker restart`recommencer. Pour ce faire, nous avons besoin de l'ID de conteneur, que nous avec la commande`docker ps`peut afficher.
 
 ```bash
 docker restart <container-id>
 ```
 
-### Tâche 7 - arrêter le conteneur
+### Tâche 7 - Arrêtez le conteneur
 
-Nous pouvons créer le conteneur avec la commande`docker stop`arrêter. Pour ce faire, nous avons besoin de l'ID du conteneur que nous utilisons avec la commande`docker ps`peut afficher.
+Nous pouvons utiliser le conteneur avec la commande`docker stop`arrêt. Pour ce faire, nous avons besoin de l'ID de conteneur, que nous avec la commande`docker ps`peut afficher.
 
 ```bash
 docker stop <container-id>
 ```
 
-### Tâche 8 - Utilisation des montages de volume
+### Tâche 8 - Utilisation des supports de volume
 
-Nous pouvons créer le conteneur avec la commande`docker run`avec le`-v`drapeau de départ. Pour cela, nous avons besoin du chemin vers le répertoire sur l'hôte et du chemin dans le conteneur.
+Nous pouvons utiliser le conteneur avec la commande`docker run`avec`-v`Démarrer le drapeau. Pour ce faire, nous avons besoin du chemin vers le répertoire de l'hôte et du chemin dans le conteneur.
 
 ```bash
 docker run -v $PWD:/var/www/html workshop
 ```
 
-Variable de matrice`$PWD`Spécifie le chemin d'accès au répertoire courant.
-Après les deux-points se trouve le chemin dans le conteneur.
+Variable de mort`$PWD`Spécifie le chemin d'accès au répertoire actuel.
+Selon le côlon, le chemin est dans le conteneur.
 
-### Tâche 9 - Publier votre propre image dans le registre
+### Tâche 9 - Publiez votre propre image dans le registre
 
-Nous pouvons créer l'image personnalisée avec la commande`docker push` in die Registry hochladen. Dazu benötigen wir den Namen des Images und den Tag.
+Nous pouvons utiliser notre propre image avec la commande`docker push`Téléchargez vers le registre. Pour ce faire, nous avons besoin du nom de l'image et du jour.
 
 ```bash
 docker push <image-name>:<tag>
 ```
 
-La balise est facultative. Si non spécifié, sera`latest`utilisé.
+La journée est facultative. S'il n'est pas spécifié,`latest`utilisé.
 
-### Tâche 10 - Création d'un fichier Docker Compose
+### Tâche 10 - Création d'un fichier docker compose
 
-Nous pouvons ajouter plusieurs conteneurs avec la commande`docker run`commencer. Pour cela, nous avons besoin des noms des images et des ports.
+Nous pouvons avoir plusieurs conteneurs avec la commande`docker run`commencer. Pour ce faire, nous avons besoin des noms des images et des ports.
 
 ```bash
 docker run -p 8000:80 workshop
 docker run -p 8001:80 workshop
 ```
 
-Nous pouvons également créer un fichier Docker Compose. Pour ce faire, nous créons un nouveau fichier appelé`docker-compose.yml`avec le contenu suivant :
+Nous pouvons également créer un fichier Docker Compose. Pour ce faire, nous créons un nouveau fichier appelé`docker-compose.yml`Avec le contenu suivant:
 
 ```yaml
 version: '3.7'
@@ -283,19 +283,19 @@ services:
       - 8001:80
 ```
 
-Vous pouvez trouver plus de matériel sur le sujet[ici](Material/Task-Task-10/task-10.md).
+Vous pouvez trouver un large matériel sur le sujet[ici](Material/Task-Task-10/task-10.md).
 
-### Tâche 11 - Lancer une application à l'aide de Docker Compose
+### Tâche 11 - Démarrez une application avec un Docker Compose
 
-Nous pouvons utiliser l'application avec la commande`docker-compose up`début.
+Nous pouvons utiliser la commande`docker-compose up` starten.
 
 ```bash
 docker-compose up -d
 ```
 
-Le`-d`Flag démarre l'application en arrière-plan comme Docker.
+Le`-d`Flag démarre l'application comme Docker en arrière-plan.
 
-**Voici une liste des commandes les plus importantes :**
+**Voici une liste des commandes les plus importantes:**
 
 ```bash
 docker-compose up -d # Startet die Anwendung im Hintergrund
@@ -305,9 +305,9 @@ docker-compose logs # Zeigt die Logs der Container an
 docker-compose exec <service> bash # Startet eine Shell im Container
 ```
 
-### Tâche 12 - Configurer une action GitHub
+### Tâche 12 - Configuration d'une action github
 
-Nous pouvons créer une action GitHub qui sera déclenchée à chaque poussée sur le`main`Branch télécharge une nouvelle image dans le registre. Pour ce faire, nous créons un nouveau fichier appelé`.github/workflows/docker.yml`avec le contenu suivant :
+Nous pouvons créer une action github qui se trouve sur le`main`Branche une nouvelle image dans le registre Hochlädt. Pour ce faire, nous créons un nouveau fichier appelé`.github/workflows/docker.yml`Avec le contenu suivant:
 
 ```yaml
 name: Docker
@@ -327,22 +327,22 @@ jobs:
             tags: workshop
 ```
 
-L'action GitHub est écrite dans le`main`Branche exécutée. Il construit l'image et la télécharge dans le registre.
+L'action github est sur le`main` Branch ausgeführt. Sie baut das Image und lädt es in die Registry hoch.
 
-En savoir plus sur les actions GitHub[ici](Material/Task-Task-Bonus/task-bonus.md).
+Vous pouvez trouver plus d'informations sur les actions GitHub[ici](Material/Task-Task-Bonus/task-bonus.md).
 
 * * *
 
-## ligne de fond
+## À côté de
 
-Dans cette conférence, nous avons couvert les bases de Docker. Nous avons vu comment Docker est utilisé pour créer et gérer des conteneurs.
+Dans cette conférence, nous avons traité les bases de Docker. Nous avons vu comment Docker est utilisé pour créer et gérer des conteneurs.
 
-Que pouvez-vous faire après la discussion pour que quelque chose colle ?
+Que pouvez-vous faire pour la conversation pour que quelque chose soit coincé?
 
-1.  Créer des images Docker pour un projet en cours
-2.  Construire un fichier Docker Compose
-3.  Pour les nerds : Découvrez Docker Swarm et Kubernetes
+1.  Créer des images Docker pour un projet actuel
+2.  Créer un fichier Docker Compose
+3.  Pour Streber: Jetez un œil à Docker Swarm et Kubernetes
 
 ## Contribuer
 
-Avez-vous des suggestions d'amélioration? Alors n'hésitez pas à créer une pull request ou à écrire quelques lignes dans[forum de discussion](https://github.com/vergissberlin/talk-docker/discussions)ou[Twitter](https://twitter.com/vergissberlin).
+Avez-vous des suggestions d'amélioration? Puis aime créer une demande de traction ou écrire quelques lignes dans[Forum pour la discussion](https://github.com/vergissberlin/talk-docker/discussions)ou[Gazouillement](https://twitter.com/vergissberlin).
